@@ -1,0 +1,17 @@
+# Phase 1
+gymnasium>=1.0
+numpy>=1.24
+matplotlib>=3.8
+pandas>=2.0
+pyyaml>=6.0
+pytest>=8.0
+tabulate>=0.9   # pandas.to_markdown(), used by evaluate_final.py
+
+# Phase 2+ (deep RL, from-scratch PyTorch DQN/PPO/CQL)
+torch>=2.0
+# stable-baselines3>=2.0  # not used -- see Phase 2 report for why a from-scratch implementation was chosen
+
+# Streamlit frontend (Review 2)
+streamlit>=1.28
+plotly>=5.18
+Pillow>=10.0

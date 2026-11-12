@@ -1,0 +1,11 @@
+{
+  "agent": "sarsa",
+  "tag": "",
+  "seed": 0,
+  "episodes": 5000,
+  "train_seconds": 13.633093118667603,
+  "final_val_success": 0.9333333333333333,
+  "best_val_success": 0.9333333333333333,
+  "episodes_to_90pct_val": 4400,
+  "env_steps": 20474
+}

@@ -1,0 +1,29 @@
+# Phase 2 configuration: DQN hyperparameters.
+# env block mirrors phase1.yaml so the reward formula stays identical across
+# phases (fair comparison).
+
+env:
+  success_reward: 10.0
+  lam: 0.1
+  mu: 0.1
+  failure_penalty: 2.0
+  seed: 42
+
+dqn:
+  lr: 0.001
+  gamma: 0.95
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_episodes: 800
+  target_update_freq: 500     # gradient steps between target-network syncs
+  embed_dim: 8
+  hidden_dim: 64
+  buffer_capacity: 50000
+  batch_size: 64
+  warmup_steps: 500           # env steps of pure exploration before training starts
+  train_freq: 1               # gradient step every N env steps
+
+training:
+  train_episodes: 3000
+  eval_episodes: 300
+  seed: 42

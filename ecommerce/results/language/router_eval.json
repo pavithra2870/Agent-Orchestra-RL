@@ -1,0 +1,707 @@
+{
+  "embedder": "all-MiniLM-L6-v2",
+  "tuned": {
+    "tau_in": 0.3899999999999999,
+    "validation_exact_match": 0.848
+  },
+  "calibration": {
+    "calibration_samples": 500.0,
+    "positive_rate": 0.848
+  },
+  "examples_A_only": {
+    "seen_wording_A": {
+      "n": 500,
+      "exact_match": 0.972,
+      "oos_precision": 1.0,
+      "oos_recall": 0.9210526315789473,
+      "per_goal": {
+        "delivery_status": {
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "payment_change": {
+          "precision": 0.9782608695652174,
+          "recall": 0.9375
+        },
+        "refund": {
+          "precision": 0.9703703703703703,
+          "recall": 1.0
+        },
+        "cancel_order": {
+          "precision": 0.9468085106382979,
+          "recall": 1.0
+        },
+        "return_item": {
+          "precision": 1.0,
+          "recall": 0.9821428571428571
+        },
+        "policy_info": {
+          "precision": 0.9747899159663865,
+          "recall": 0.9830508474576272
+        }
+      },
+      "mean_conf_when_correct": 0.9474025459938495,
+      "mean_conf_when_wrong": 0.7769170602066477,
+      "mean_best_similarity": 0.8889972536563874,
+      "low_conf_catches_errors": 0.0,
+      "low_conf_false_alarms": 0.0
+    },
+    "tuning_wording_C": {
+      "n": 500,
+      "exact_match": 0.848,
+      "oos_precision": 1.0,
+      "oos_recall": 0.7096774193548387,
+      "per_goal": {
+        "delivery_status": {
+          "precision": 0.9698492462311558,
+          "recall": 0.9698492462311558
+        },
+        "payment_change": {
+          "precision": 1.0,
+          "recall": 0.8048780487804879
+        },
+        "refund": {
+          "precision": 0.8439716312056738,
+          "recall": 0.952
+        },
+        "cancel_order": {
+          "precision": 1.0,
+          "recall": 0.9135802469135802
+        },
+        "return_item": {
+          "precision": 0.8043478260869565,
+          "recall": 0.8604651162790697
+        },
+        "policy_info": {
+          "precision": 0.9423076923076923,
+          "recall": 0.9483870967741935
+        }
+      },
+      "mean_conf_when_correct": 0.8632530980147928,
+      "mean_conf_when_wrong": 0.7627456386178935,
+      "mean_best_similarity": 0.7566565097570419,
+      "low_conf_catches_errors": 0.0,
+      "low_conf_false_alarms": 0.0
+    },
+    "held_out_wording_B": {
+      "n": 500,
+      "exact_match": 0.938,
+      "oos_precision": 1.0,
+      "oos_recall": 1.0,
+      "per_goal": {
+        "delivery_status": {
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "payment_change": {
+          "precision": 0.8983050847457628,
+          "recall": 0.9217391304347826
+        },
+        "refund": {
+          "precision": 0.9588235294117647,
+          "recall": 0.9939024390243902
+        },
+        "cancel_order": {
+          "precision": 1.0,
+          "recall": 0.9666666666666667
+        },
+        "return_item": {
+          "precision": 0.9428571428571428,
+          "recall": 0.9428571428571428
+        },
+        "policy_info": {
+          "precision": 0.9777777777777777,
+          "recall": 0.9166666666666666
+        }
+      },
+      "mean_conf_when_correct": 0.8621998662838041,
+      "mean_conf_when_wrong": 0.8008364326468299,
+      "mean_best_similarity": 0.7930864381790161,
+      "low_conf_catches_errors": 0.0,
+      "low_conf_false_alarms": 0.0
+    }
+  },
+  "examples_A_plus_C": {
+    "held_out_wording_B": {
+      "n": 500,
+      "exact_match": 0.92,
+      "oos_precision": 1.0,
+      "oos_recall": 1.0,
+      "per_goal": {
+        "delivery_status": {
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "payment_change": {
+          "precision": 0.8899082568807339,
+          "recall": 0.8434782608695652
+        },
+        "refund": {
+          "precision": 0.9418604651162791,
+          "recall": 0.9878048780487805
+        },
+        "cancel_order": {
+          "precision": 1.0,
+          "recall": 0.9666666666666667
+        },
+        "return_item": {
+          "precision": 0.9305555555555556,
+          "recall": 0.9571428571428572
+        },
+        "policy_info": {
+          "precision": 0.9777777777777777,
+          "recall": 0.9166666666666666
+        }
+      },
+      "mean_conf_when_correct": 0.872554084569561,
+      "mean_conf_when_wrong": 0.8000021157121566,
+      "mean_best_similarity": 0.8050590017437935,
+      "low_conf_catches_errors": 0.0,
+      "low_conf_false_alarms": 0.0
+    }
+  },
+  "errors_on_B": [
+    {
+      "text": "what rules apply to switching to upi?",
+      "truth": [
+        "policy_info"
+      ],
+      "predicted": [
+        "payment_change"
+      ]
+    },
+    {
+      "text": "excuse me, what rules apply to switching to upi? plus can you stop the shipment of my order?",
+      "truth": [
+        "policy_info",
+        "cancel_order"
+      ],
+      "predicted": [
+        "payment_change",
+        "cancel_order"
+      ]
+    },
+    {
+      "text": "good evening, is it possible to return something i bought? while you're at it, scrap ORD-6679 please",
+      "truth": [
+        "policy_info",
+        "cancel_order"
+      ],
+      "predicted": [
+        "return_item",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "good evening, is order ORD-6072 still on the way?. Additionally, change my payment option for order ORD-6072 to my credit card and on top of that, i need to recover the money i paid for order ORD-6072",
+      "truth": [
+        "delivery_status",
+        "payment_change",
+        "refund"
+      ],
+      "predicted": [
+        "delivery_status",
+        "refund",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "good evening, what rules apply to switching to upi?",
+      "truth": [
+        "policy_info"
+      ],
+      "predicted": [
+        "payment_change"
+      ]
+    },
+    {
+      "text": "hi there, what is the current location of order ORD-1988? while you're at it, make the payment for order ORD-1988 card please",
+      "truth": [
+        "delivery_status",
+        "payment_change"
+      ],
+      "predicted": [
+        "delivery_status",
+        "refund"
+      ]
+    },
+    {
+      "text": "excuse me, make the payment for order ORD-6688 card please",
+      "truth": [
+        "payment_change"
+      ],
+      "predicted": [
+        "refund"
+      ]
+    },
+    {
+      "text": "hi there, track my parcel order ORD-5674 please while you're at it, make the payment for order ORD-5674 my credit card please plus send me a refund for order ORD-5674",
+      "truth": [
+        "delivery_status",
+        "payment_change",
+        "refund"
+      ],
+      "predicted": [
+        "delivery_status",
+        "refund"
+      ]
+    },
+    {
+      "text": "hi there, what if what i bought arrives broken? plus the item in my order has stopped working, i'd like a refund for it",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "refund",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "give me the shipping status for order ORD-7117 while you're at it, set the payment on order ORD-7117 to UPI and on top of that, i want odrer ORD-7117 refudned",
+      "truth": [
+        "delivery_status",
+        "payment_change",
+        "refund"
+      ],
+      "predicted": [
+        "delivery_status",
+        "payment_change",
+        "return_item"
+      ]
+    },
+    {
+      "text": "good evening, my delivery my order is overdue, can you look into it and on top of that, my item in my order is faulty and unusable, i want my money back",
+      "truth": [
+        "delivery_status",
+        "return_item"
+      ],
+      "predicted": [
+        "delivery_status",
+        "refund",
+        "return_item"
+      ]
+    },
+    {
+      "text": "hi there, can the way i pay be changed later? plus my order is defective, i'd like a refund for it",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "refund",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "scrap order ORD-4776 please",
+      "truth": [
+        "cancel_order"
+      ],
+      "predicted": [
+        "return_item"
+      ]
+    },
+    {
+      "text": "hi there, what rules apply to switching to upi?. Additionally, is order ORD-2783 still on the way?",
+      "truth": [
+        "policy_info",
+        "delivery_status"
+      ],
+      "predicted": [
+        "delivery_status",
+        "payment_change"
+      ]
+    },
+    {
+      "text": "good evening, what rules apply to switching to upi? while you're at it, how far along is order ORD-9695?",
+      "truth": [
+        "policy_info",
+        "delivery_status"
+      ],
+      "predicted": [
+        "delivery_status",
+        "payment_change"
+      ]
+    },
+    {
+      "text": "good evening, what rules apply to switching to upi?. Additionally, i'd like to return the item in ORD-9144",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "payment_change",
+        "return_item"
+      ]
+    },
+    {
+      "text": "excuse me, what rules apply to switching to upi? while you're at it, has ORD-4755 been dispatched?",
+      "truth": [
+        "policy_info",
+        "delivery_status"
+      ],
+      "predicted": [
+        "delivery_status",
+        "payment_change"
+      ]
+    },
+    {
+      "text": "what rules apply to switching to upi?. Additionally, could you tell me when ORD-6256 will reach me",
+      "truth": [
+        "policy_info",
+        "delivery_status"
+      ],
+      "predicted": [
+        "delivery_status",
+        "payment_change"
+      ]
+    },
+    {
+      "text": "am i entitled to my money back, in general? plus something is broken in order ORD-2275, i want my money back",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "refund",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "excuse me, my item in order ORD-7463 is faulty and unusable, i'd like a refund for it",
+      "truth": [
+        "return_item"
+      ],
+      "predicted": [
+        "return_item",
+        "policy_info"
+      ]
+    },
+    {
+      "text": "excuse me, what rules apply to switching to upi?",
+      "truth": [
+        "policy_info"
+      ],
+      "predicted": [
+        "payment_change"
+      ]
+    },
+    {
+      "text": "excuse me, change my payment option for ORD-6307 to my credit card",
+      "truth": [
+        "payment_change"
+      ],
+      "predicted": [
+        "policy_info"
+      ]
+    },
+    {
+      "text": "good evening, what rules apply to switching to upi? plus i'd like to return the item in order ORD-1094",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "payment_change",
+        "return_item"
+      ]
+    },
+    {
+      "text": "excuse me, what rlues aplpy to switching to upi?. Additionally, the item in order ORD-1476 doesn't fit, i'd like to return it",
+      "truth": [
+        "policy_info",
+        "return_item"
+      ],
+      "predicted": [
+        "payment_change",
+        "return_item"
+      ]
+    },
+    {
+      "text": "hi there, what rules apply to switching to upi?",
+      "truth": [
+        "policy_info"
+      ],
+      "predicted": [
+        "payment_change"
+      ]
+    }
+  ],
+  "seconds": 45.58478832244873,
+  "llm_parser": {
+    "available": true,
+    "model": "phi4-mini:latest",
+    "messages": 60,
+    "phrase_set": "B (held-out wording)",
+    "router_only": {
+      "n": 60,
+      "exact_match": 0.9166666666666666,
+      "invented_goal_rate": 0.08333333333333333,
+      "missed_goal_rate": 0.08333333333333333,
+      "low_conf_catches_errors": 0.0,
+      "low_conf_false_alarms": 0.0
+    },
+    "llm_only_raw": {
+      "n": 60,
+      "exact_match": 0.8166666666666667,
+      "invented_goal_rate": 0.13333333333333333,
+      "missed_goal_rate": 0.18333333333333332
+    },
+    "llm_plus_router": {
+      "n": 60,
+      "exact_match": 0.8166666666666667,
+      "invented_goal_rate": 0.13333333333333333,
+      "missed_goal_rate": 0.18333333333333332,
+      "low_conf_catches_errors": 0.9090909090909091,
+      "low_conf_false_alarms": 0.061224489795918366
+    },
+    "fallbacks_to_router": 0,
+    "goals_dropped_by_guard": 0,
+    "avg_llm_seconds": 4.871700445810954,
+    "wall_seconds": 292.7243149280548,
+    "examples": [
+      {
+        "text": "what is your ploicy on sending ietms back? plus has ORD-5762 been dispatched?",
+        "truth": [
+          "policy_info",
+          "delivery_status"
+        ],
+        "router": [
+          "delivery_status",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "return_item",
+          "policy_info"
+        ],
+        "final": [
+          "return_item",
+          "policy_info"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['return_item', 'policy_info'] and router ['delivery_status', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "how do i change from cash to card payment? plus give me the shipping status for order ORD-8466",
+        "truth": [
+          "policy_info",
+          "delivery_status"
+        ],
+        "router": [
+          "delivery_status",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "delivery_status",
+          "payment_change"
+        ],
+        "final": [
+          "delivery_status",
+          "payment_change"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['delivery_status', 'payment_change'] and router ['delivery_status', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "excuse me, what compensation do i get for a delayed order?. Additionally, i wish to cancel order ORD-1553",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "cancel_order",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "refund",
+          "cancel_order"
+        ],
+        "final": [
+          "refund",
+          "cancel_order"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['refund', 'cancel_order'] and router ['cancel_order', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "hi there, my order came damaged, i want my money back",
+        "truth": [
+          "return_item"
+        ],
+        "router": [
+          "return_item"
+        ],
+        "llm_raw": [
+          "refund"
+        ],
+        "final": [
+          "refund"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['refund'] and router ['return_item'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "excuse me, what rules apply to switching to upi? plus can you stop the shipment of my order?",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "payment_change",
+          "cancel_order"
+        ],
+        "llm_raw": [
+          "payment_change",
+          "cancel_order"
+        ],
+        "final": [
+          "payment_change",
+          "cancel_order"
+        ],
+        "conf": 0.77,
+        "notes": []
+      },
+      {
+        "text": "excuse me, how do i change from cash to card payment?. Additionally, go ahead and cancel ORD-6205",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "cancel_order",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "payment_change",
+          "cancel_order"
+        ],
+        "final": [
+          "payment_change",
+          "cancel_order"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['payment_change', 'cancel_order'] and router ['cancel_order', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "hi there, is it possible to return somethnig i bought?. Additionally, order ORD-8113 is defective, send me a rpelacement",
+        "truth": [
+          "policy_info",
+          "return_item"
+        ],
+        "router": [
+          "return_item",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "return_item"
+        ],
+        "final": [
+          "return_item"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['return_item'] and router ['return_item', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "hi there, explain how your refunds work while you're at it, order ORD-3786 is defective, i want my money back",
+        "truth": [
+          "policy_info",
+          "return_item"
+        ],
+        "router": [
+          "return_item",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "refund",
+          "policy_info"
+        ],
+        "final": [
+          "refund",
+          "policy_info"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['refund', 'policy_info'] and router ['return_item', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "how does cancelling an order work? while you're at it, order ORD-9334 must not be sent, cancel it",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "cancel_order",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "cancel_order"
+        ],
+        "final": [
+          "cancel_order"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['cancel_order'] and router ['cancel_order', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "good evening, is it possible to return something i bought? while you're at it, scrap ORD-6679 please",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "return_item",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "cancel_order",
+          "return_item"
+        ],
+        "final": [
+          "cancel_order",
+          "return_item"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['cancel_order', 'return_item'] and router ['return_item', 'policy_info'] disagree, so confidence is capped"
+        ]
+      },
+      {
+        "text": "is there a time limit for cancelling? and on top of that, i don't need ORD-8057 anymore, stop it",
+        "truth": [
+          "policy_info",
+          "cancel_order"
+        ],
+        "router": [
+          "cancel_order",
+          "policy_info"
+        ],
+        "llm_raw": [
+          "cancel_order"
+        ],
+        "final": [
+          "cancel_order"
+        ],
+        "conf": 0.45,
+        "notes": [
+          "LLM ['cancel_order'] and router ['cancel_order', 'policy_info'] disagree, so confidence is capped"
+        ]
+      }
+    ]
+  }
+}

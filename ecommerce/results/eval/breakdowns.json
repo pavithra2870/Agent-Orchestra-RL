@@ -1,0 +1,2162 @@
+{
+  "random": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.034782608695652174,
+        "n": 460
+      },
+      "missing_order": {
+        "success_rate": 0.026785714285714284,
+        "n": 448
+      },
+      "out_of_scope": {
+        "success_rate": 0.5,
+        "n": 336
+      },
+      "standard": {
+        "success_rate": 0.05368968779564806,
+        "n": 4228
+      },
+      "wrong_order": {
+        "success_rate": 0.017857142857142856,
+        "n": 168
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.0,
+        "n": 156
+      },
+      "delivery_status": {
+        "success_rate": 0.0078125,
+        "n": 128
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.008333333333333333,
+        "n": 120
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.0,
+        "n": 148
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 156
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.0,
+        "n": 124
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.008620689655172414,
+        "n": 580
+      },
+      "none": {
+        "success_rate": 0.5104166666666666,
+        "n": 96
+      },
+      "payment_change": {
+        "success_rate": 0.024193548387096774,
+        "n": 124
+      },
+      "payment_change+refund": {
+        "success_rate": 0.00625,
+        "n": 160
+      },
+      "policy_info": {
+        "success_rate": 0.17151162790697674,
+        "n": 344
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.01818181818181818,
+        "n": 220
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.0125,
+        "n": 320
+      },
+      "policy_info+refund": {
+        "success_rate": 0.04435483870967742,
+        "n": 248
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.03361344537815126,
+        "n": 476
+      },
+      "refund": {
+        "success_rate": 0.058333333333333334,
+        "n": 120
+      },
+      "return_item": {
+        "success_rate": 0.14375,
+        "n": 480
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.0,
+        "n": 72
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.016666666666666666,
+        "n": 60
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.0,
+        "n": 76
+      },
+      "declined:not_paid": {
+        "success_rate": 0.013888888888888888,
+        "n": 72
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.0,
+        "n": 40
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.0,
+        "n": 300
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.00641025641025641,
+        "n": 156
+      },
+      "done:return_ok": {
+        "success_rate": 0.0,
+        "n": 132
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.18181818181818182,
+        "n": 44
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.15,
+        "n": 40
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.20833333333333334,
+        "n": 144
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.359375,
+        "n": 64
+      }
+    }
+  },
+  "random_no_guardrail": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.004347826086956522,
+        "n": 460
+      },
+      "missing_order": {
+        "success_rate": 0.002232142857142857,
+        "n": 448
+      },
+      "out_of_scope": {
+        "success_rate": 0.08630952380952381,
+        "n": 336
+      },
+      "standard": {
+        "success_rate": 0.006385998107852412,
+        "n": 4228
+      },
+      "wrong_order": {
+        "success_rate": 0.0,
+        "n": 168
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.0,
+        "n": 156
+      },
+      "delivery_status": {
+        "success_rate": 0.0,
+        "n": 128
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.0,
+        "n": 120
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.0,
+        "n": 148
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 156
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.0,
+        "n": 124
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.0,
+        "n": 580
+      },
+      "none": {
+        "success_rate": 0.0625,
+        "n": 96
+      },
+      "payment_change": {
+        "success_rate": 0.0,
+        "n": 124
+      },
+      "payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 160
+      },
+      "policy_info": {
+        "success_rate": 0.01744186046511628,
+        "n": 344
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.004545454545454545,
+        "n": 220
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.0,
+        "n": 320
+      },
+      "policy_info+refund": {
+        "success_rate": 0.0,
+        "n": 248
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.008403361344537815,
+        "n": 476
+      },
+      "refund": {
+        "success_rate": 0.0,
+        "n": 120
+      },
+      "return_item": {
+        "success_rate": 0.020833333333333332,
+        "n": 480
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.0,
+        "n": 72
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.0,
+        "n": 60
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.0,
+        "n": 76
+      },
+      "declined:not_paid": {
+        "success_rate": 0.0,
+        "n": 72
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.0,
+        "n": 40
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.0033333333333333335,
+        "n": 300
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.0,
+        "n": 156
+      },
+      "done:return_ok": {
+        "success_rate": 0.0,
+        "n": 132
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.022727272727272728,
+        "n": 44
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.0,
+        "n": 40
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.027777777777777776,
+        "n": 144
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.078125,
+        "n": 64
+      }
+    }
+  },
+  "rule_based": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 1.0,
+        "n": 460
+      },
+      "missing_order": {
+        "success_rate": 0.9977678571428571,
+        "n": 448
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 336
+      },
+      "standard": {
+        "success_rate": 0.9983443708609272,
+        "n": 4228
+      },
+      "wrong_order": {
+        "success_rate": 1.0,
+        "n": 168
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 156
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 128
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 148
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 1.0,
+        "n": 156
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 124
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 580
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 96
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 124
+      },
+      "payment_change+refund": {
+        "success_rate": 1.0,
+        "n": 160
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 344
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 220
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 320
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 248
+      },
+      "policy_info+return_item": {
+        "success_rate": 1.0,
+        "n": 476
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 480
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 72
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 60
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 76
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 72
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 40
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 300
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 156
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 44
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 40
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 144
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 64
+      }
+    }
+  },
+  "q_learning": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.7253623188405797,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.6659226190476191,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.6553137811415957,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.5694444444444444,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.9658119658119658,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 0.9791666666666666,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.011111111111111112,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.9436936936936937,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.002136752136752137,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.8333333333333334,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.007471264367816092,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 0.9327956989247311,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.008333333333333333,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 0.9883720930232558,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.7787878787878788,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.017708333333333333,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.7903225806451613,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.8914565826330533,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 0.9333333333333333,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 0.9381944444444444,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.5601851851851852,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.5777777777777777,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.6535087719298246,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 0.6712962962962963,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.575,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.5877777777777777,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.6581196581196581,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.5707070707070707,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.5151515151515151,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.375,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.5717592592592593,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.7864583333333334,
+        "n": 192
+      }
+    }
+  },
+  "sarsa": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.6746376811594202,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.6800595238095238,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.6446704509618417,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.5615079365079365,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.9658119658119658,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 0.9427083333333334,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.005555555555555556,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.9279279279279279,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.8575268817204301,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.01264367816091954,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 0.9112903225806451,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.008333333333333333,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 0.9854651162790697,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.8045454545454546,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.022916666666666665,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.7862903225806451,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.84593837535014,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 0.9083333333333333,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 0.8888888888888888,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.5416666666666666,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.4722222222222222,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.631578947368421,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 0.6620370370370371,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.5416666666666666,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.5322222222222223,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.6324786324786325,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.51010101010101,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.5378787878787878,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.4083333333333333,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.5810185185185185,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.75,
+        "n": 192
+      }
+    }
+  },
+  "dqn": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.9971014492753624,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9985119047619048,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9802112898139388,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 1.0,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.9871794871794872,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.9916666666666667,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.969187675070028,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.9814814814814815,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.9777777777777777,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.9666666666666667,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.9955555555555555,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.9572649572649573,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.9797979797979798,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "ppo": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.9768115942028985,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9188988095238095,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9370860927152318,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.8333333333333334,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.05982905982905983,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.9988505747126437,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.25,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 0.9883720930232558,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 1.0,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "cql": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.936231884057971,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9888392857142857,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9761116367076632,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.9841269841269841,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 0.9791666666666666,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.9658119658119658,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.9080459770114943,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 0.978494623655914,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 1.0,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.9878787878787879,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.9916666666666667,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.989247311827957,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 1.0,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.8484848484848485,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.8,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.8611111111111112,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.9375,
+        "n": 192
+      }
+    }
+  },
+  "dqn_sparse": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 1.0,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9977678571428571,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9835225480920845,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.998015873015873,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.9973118279569892,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 1.0,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 1.0,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "ppo_sparse": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.9905797101449275,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9598214285714286,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9592399873856827,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.9126984126984127,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.39316239316239315,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.9902298850574712,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.6979166666666666,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.9978991596638656,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.9866666666666667,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.9935897435897436,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.9949494949494949,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "dqn_robust": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.9927536231884058,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9962797619047619,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9954273099968464,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.996031746031746,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.9972222222222222,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.9935897435897436,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.9916666666666667,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.9865591397849462,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.9992997198879552,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 0.9944444444444445,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.9988888888888889,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "ppo_robust": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.9797101449275363,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.9345238095238095,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.967202775149795,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.9067460317460317,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.344017094017094,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.51875,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.9984848484848485,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.9992997198879552,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.9974747474747475,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  },
+  "dqn_nomask": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.07173913043478261,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.12276785714285714,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.17754651529485965,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.08531746031746032,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.002136752136752137,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 0.6067708333333334,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.10810810810810811,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.010752688172043012,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 0.10483870967741936,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 0.9525193798449613,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.14242424242424243,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.2635416666666667,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.006720430107526882,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.032913165266106444,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 0.075,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 0.05694444444444444,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 0.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.09848484848484848,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.03333333333333333,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.08101851851851852,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.19270833333333334,
+        "n": 192
+      }
+    }
+  },
+  "ppo_nomask": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.014492753623188406,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 0.008928571428571428,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 0.3333333333333333,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.07513402712078208,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 0.007936507936507936,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 0.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 0.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 0.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 0.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 0.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 0.3333333333333333,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 0.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.0,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 0.5591085271317829,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 0.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 0.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 0.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 0.0,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 0.03333333333333333,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 0.1,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 0.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 0.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 0.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 0.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 0.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 0.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 0.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 0.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 0.12121212121212122,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 0.1,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 0.10185185185185185,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 0.16666666666666666,
+        "n": 192
+      }
+    }
+  },
+  "cql_alpha0": {
+    "by_type": {
+      "low_confidence": {
+        "success_rate": 0.991304347826087,
+        "n": 1380
+      },
+      "missing_order": {
+        "success_rate": 1.0,
+        "n": 1344
+      },
+      "out_of_scope": {
+        "success_rate": 1.0,
+        "n": 1008
+      },
+      "standard": {
+        "success_rate": 0.9842321034374014,
+        "n": 12684
+      },
+      "wrong_order": {
+        "success_rate": 1.0,
+        "n": 504
+      }
+    },
+    "by_combo": {
+      "cancel_order": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "delivery_status": {
+        "success_rate": 1.0,
+        "n": 384
+      },
+      "delivery_status+cancel_order": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "delivery_status+payment_change": {
+        "success_rate": 1.0,
+        "n": 444
+      },
+      "delivery_status+payment_change+refund": {
+        "success_rate": 0.9914529914529915,
+        "n": 468
+      },
+      "delivery_status+refund": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "delivery_status+return_item": {
+        "success_rate": 1.0,
+        "n": 1740
+      },
+      "none": {
+        "success_rate": 1.0,
+        "n": 288
+      },
+      "payment_change": {
+        "success_rate": 1.0,
+        "n": 372
+      },
+      "payment_change+refund": {
+        "success_rate": 0.9916666666666667,
+        "n": 480
+      },
+      "policy_info": {
+        "success_rate": 1.0,
+        "n": 1032
+      },
+      "policy_info+cancel_order": {
+        "success_rate": 1.0,
+        "n": 660
+      },
+      "policy_info+delivery_status": {
+        "success_rate": 1.0,
+        "n": 960
+      },
+      "policy_info+refund": {
+        "success_rate": 1.0,
+        "n": 744
+      },
+      "policy_info+return_item": {
+        "success_rate": 1.0,
+        "n": 1428
+      },
+      "refund": {
+        "success_rate": 1.0,
+        "n": 360
+      },
+      "return_item": {
+        "success_rate": 1.0,
+        "n": 1440
+      }
+    },
+    "by_return_outcome": {
+      "declined:already_claimed": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:declaration_not_confirmed": {
+        "success_rate": 1.0,
+        "n": 180
+      },
+      "declined:not_delivered": {
+        "success_rate": 1.0,
+        "n": 228
+      },
+      "declined:not_paid": {
+        "success_rate": 1.0,
+        "n": 216
+      },
+      "declined:outside_return_window": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "done:exchange_ok": {
+        "success_rate": 1.0,
+        "n": 900
+      },
+      "done:instant_refund_ok": {
+        "success_rate": 1.0,
+        "n": 468
+      },
+      "done:return_ok": {
+        "success_rate": 1.0,
+        "n": 396
+      },
+      "escalate:above_instant_limit": {
+        "success_rate": 1.0,
+        "n": 132
+      },
+      "escalate:claim_history": {
+        "success_rate": 1.0,
+        "n": 120
+      },
+      "escalate:high_value_needs_approval": {
+        "success_rate": 1.0,
+        "n": 432
+      },
+      "escalate:late_damage_report": {
+        "success_rate": 1.0,
+        "n": 192
+      }
+    }
+  }
+}

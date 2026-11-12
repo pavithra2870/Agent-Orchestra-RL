@@ -1,0 +1,11 @@
+{
+  "agent": "q_learning",
+  "tag": "",
+  "seed": 1,
+  "episodes": 5000,
+  "train_seconds": 15.43681526184082,
+  "final_val_success": 0.94,
+  "best_val_success": 0.9466666666666667,
+  "episodes_to_90pct_val": 4200,
+  "env_steps": 20440
+}

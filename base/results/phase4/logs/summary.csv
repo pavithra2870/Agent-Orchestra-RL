@@ -1,0 +1,2 @@
+agent,episodes,avg_reward,success_rate,avg_cost,avg_latency,avg_steps,regret_vs_oracle
+multi_agent,300,4.43039927634622,0.6,2.27622455885002,2.419782677687779,0.9866666666666667,4.169596607174652

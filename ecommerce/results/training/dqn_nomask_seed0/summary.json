@@ -1,0 +1,11 @@
+{
+  "agent": "dqn",
+  "tag": "nomask",
+  "seed": 0,
+  "episodes": 4000,
+  "train_seconds": 116.48567080497742,
+  "final_val_success": 0.3466666666666667,
+  "best_val_success": 0.3466666666666667,
+  "episodes_to_90pct_val": null,
+  "env_steps": 38375
+}

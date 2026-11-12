@@ -1,0 +1,64 @@
+{
+  "episodes": 12000,
+  "seed": 0,
+  "selection": "highest best_val_success on the validation split, ties broken by fewest episodes to 90%",
+  "grid": [
+    {
+      "name": "default",
+      "hp": {},
+      "best_val_success": 1.0,
+      "final_val_success": 1.0,
+      "episodes_to_90pct_val": 1800,
+      "seconds": 180.1778907775879
+    },
+    {
+      "name": "lr1e-3",
+      "hp": {
+        "lr": 0.001
+      },
+      "best_val_success": 1.0,
+      "final_val_success": 1.0,
+      "episodes_to_90pct_val": 1800,
+      "seconds": 148.67925763130188
+    },
+    {
+      "name": "lr1e-3_roll512",
+      "hp": {
+        "lr": 0.001,
+        "rollout_steps": 512
+      },
+      "best_val_success": 1.0,
+      "final_val_success": 1.0,
+      "episodes_to_90pct_val": 1800,
+      "seconds": 127.9646897315979
+    },
+    {
+      "name": "lr3e-4_roll512_ent.003",
+      "hp": {
+        "rollout_steps": 512,
+        "ent_coef": 0.003
+      },
+      "best_val_success": 1.0,
+      "final_val_success": 1.0,
+      "episodes_to_90pct_val": 1800,
+      "seconds": 114.3417718410492
+    },
+    {
+      "name": "lr1e-3_roll512_ent.003_gamma.97",
+      "hp": {
+        "lr": 0.001,
+        "rollout_steps": 512,
+        "ent_coef": 0.003,
+        "gamma": 0.97
+      },
+      "best_val_success": 1.0,
+      "final_val_success": 1.0,
+      "episodes_to_90pct_val": 1800,
+      "seconds": 111.69690942764282
+    }
+  ],
+  "chosen": {
+    "name": "default",
+    "hp": {}
+  }
+}

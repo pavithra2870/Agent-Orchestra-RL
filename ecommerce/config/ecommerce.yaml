@@ -1,0 +1,72 @@
+# Central configuration for the e-commerce support-agent case study.
+# Every run saves a copy of the config it used, so results are reproducible.
+
+world:
+  n_customers: 60
+  max_orders_per_customer: 3
+  high_value_threshold: 5000.0      # refunds above this need a human
+  refund_window_days: 7             # delivered orders can be refunded within this many days
+  delay_refund_days: 5              # delayed orders become refundable after this many days late
+  return_window_days: 7             # change-of-mind returns: days after delivery (no fee)
+  damage_report_window_days: 2      # damage must be reported within 48 hours of delivery, otherwise a human decides
+  instant_refund_cap: 500.0         # damaged item: orders up to this total are handled without a human (rupees)
+  damage_claims_limit: 2            # this many damage claims inside the period: the next goes to a human
+  claims_period_days: 30
+
+tools:
+  # base_cost, base_latency (seconds-like units), failure_prob (transient failure chance per call)
+  lookup_customer:                  {cost: 0.5, latency: 0.5, failure_prob: 0.03}
+  lookup_order:                     {cost: 0.5, latency: 0.5, failure_prob: 0.03}
+  check_shipment:                   {cost: 1.0, latency: 1.5, failure_prob: 0.06}
+  get_payment_details:              {cost: 0.5, latency: 0.5, failure_prob: 0.03}
+  check_payment_change_eligibility: {cost: 1.0, latency: 1.0, failure_prob: 0.04}
+  update_payment_method:            {cost: 2.0, latency: 2.0, failure_prob: 0.05}
+  check_refund_eligibility:         {cost: 1.0, latency: 1.0, failure_prob: 0.04}
+  initiate_refund:                  {cost: 3.0, latency: 3.0, failure_prob: 0.05}
+  check_cancel_eligibility:         {cost: 1.0, latency: 1.0, failure_prob: 0.04}
+  cancel_order:                     {cost: 2.0, latency: 2.0, failure_prob: 0.05}
+  check_return_eligibility:         {cost: 1.0, latency: 1.0, failure_prob: 0.04}
+  process_return:                   {cost: 2.5, latency: 2.5, failure_prob: 0.05}
+  lookup_policy:                    {cost: 0.5, latency: 0.5, failure_prob: 0.02}
+  request_clarification:            {cost: 0.5, latency: 3.0, failure_prob: 0.0}
+  escalate_to_human:                {cost: 8.0, latency: 8.0, failure_prob: 0.0}
+  finish_task:                      {cost: 0.0, latency: 0.0, failure_prob: 0.0}
+
+env:
+  max_steps: 16
+  cost_budget: 30.0                 # only used to normalise the cost feature
+  max_clarifications: 2
+  max_consecutive_tool_failures: 3  # after this many failures a tool is locked (retry limit)
+
+reward:
+  # See ecommerce/env/env.py for the full reward formula and reasoning.
+  lam_cost: 0.1
+  mu_latency: 0.05
+  goal_handled_bonus: 1.0
+  success_bonus: 5.0
+  failure_penalty: 2.0
+  violation_penalty: 5.0
+  blocked_action_penalty: 0.5
+  unneeded_clarification_penalty: 0.3
+
+scenarios:
+  type_probs:                       # training mix
+    standard: 0.66
+    missing_order: 0.12
+    wrong_order: 0.05
+    low_confidence: 0.11
+    out_of_scope: 0.06
+  typo_prob: 0.15
+  failure_multiplier_stress: 3.0    # used by the tool-failure test set
+  down_tool_prob_stress: 0.2        # chance a (non-lookup) tool is fully down in stress scenarios
+
+guardrails:
+  in_scope_threshold: 0.38          # router: minimum similarity to accept a clause as an in-scope goal
+  margin_threshold: 0.04            # router: minimum gap between best and second-best goal
+  low_confidence_threshold: 0.6     # below this the policy is told the parse is unreliable
+
+llm:
+  ollama_url: http://localhost:11434
+  model: phi4-mini:latest
+  timeout_seconds: 120
+  temperature: 0.0

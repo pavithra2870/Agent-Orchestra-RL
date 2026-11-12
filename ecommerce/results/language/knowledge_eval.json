@@ -1,0 +1,33 @@
+{
+  "test": {
+    "policy_questions": 21,
+    "router_recognises_policy_question": 0.9523809523809523,
+    "topic_accuracy": 0.9523809523809523,
+    "both_right": 0.9047619047619048,
+    "ordinary_requests": 258,
+    "ordinary_requests_called_policy": 0.011627906976744186
+  },
+  "topics": [
+    "cancellation_policy",
+    "damaged_item",
+    "delayed_order",
+    "lost_order",
+    "payment_change_policy",
+    "refund_policy",
+    "returns_exchange"
+  ],
+  "misses": [
+    {
+      "text": "under what rules do you refund orders?",
+      "got_topic": "lost_order",
+      "expected": "refund_policy",
+      "router_said_policy": true
+    },
+    {
+      "text": "what rules apply to switching to upi?",
+      "got_topic": "payment_change_policy",
+      "expected": "payment_change_policy",
+      "router_said_policy": false
+    }
+  ]
+}

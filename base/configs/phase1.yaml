@@ -1,0 +1,25 @@
+# Phase 1 configuration: environment reward weights + baseline agent hyperparameters.
+# Referenced by train_phase1.py. Keep this in sync with any values hardcoded
+# in ToolOrchestrationEnv defaults if you change them here.
+
+env:
+  success_reward: 10.0
+  lam: 0.1          # lambda: cost weight in the reward
+  mu: 0.1           # mu: latency weight in the reward
+  failure_penalty: 2.0
+  seed: 42
+
+tabular:
+  alpha: 0.1
+  gamma: 0.95
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_episodes: 4000
+
+training:
+  train_episodes: 6000
+  eval_episodes: 300
+  seed: 42
+
+rule_based:
+  max_retries: 2

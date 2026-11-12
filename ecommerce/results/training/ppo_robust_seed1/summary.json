@@ -1,0 +1,11 @@
+{
+  "agent": "ppo",
+  "tag": "robust",
+  "seed": 1,
+  "episodes": 12000,
+  "train_seconds": 80.69823837280273,
+  "final_val_success": 1.0,
+  "best_val_success": 1.0,
+  "episodes_to_90pct_val": 5200,
+  "env_steps": 75949
+}

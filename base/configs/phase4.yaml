@@ -1,0 +1,27 @@
+# Phase 4 configuration: independent PPO agents (triage + execution) on
+# MultiAgentToolOrchestrationEnv. env block mirrors earlier phases.
+
+env:
+  success_reward: 10.0
+  lam: 0.1
+  mu: 0.1
+  failure_penalty: 2.0
+  seed: 42
+
+ppo:
+  lr: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95   # unused for execution (bandit-style, no bootstrap) but kept for triage
+  clip_eps: 0.2
+  vf_coef: 0.5
+  ent_coef: 0.01
+  update_epochs: 4
+  triage_minibatch_size: 64
+  execution_minibatch_size: 32
+  embed_dim: 8
+  hidden_dim: 64
+  triage_n_steps_per_update: 512   # env (triage) steps collected per triage PPO update
+  execution_n_steps_per_update: 128  # delegated-turn count collected per execution PPO update
+  total_train_steps: 100000
+  eval_episodes: 300
+  seed: 42

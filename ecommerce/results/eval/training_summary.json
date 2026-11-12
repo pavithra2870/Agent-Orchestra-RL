@@ -1,0 +1,290 @@
+{
+  "q_learning": {
+    "label": "Q-learning",
+    "kind": "online",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 0.94,
+      "std": 0.0054433105395181635
+    },
+    "final_val_success": {
+      "mean": 0.9377777777777778,
+      "std": 0.0031426968052735123
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 4000.0,
+      "env_steps_mean": 15534.0
+    },
+    "train_seconds": {
+      "mean": 20.75825293858846,
+      "std": 9.421237273019088
+    },
+    "total_budget": 5000
+  },
+  "sarsa": {
+    "label": "SARSA",
+    "kind": "online",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 0.9377777777777778,
+      "std": 0.021998877636914816
+    },
+    "final_val_success": {
+      "mean": 0.9377777777777778,
+      "std": 0.021998877636914816
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 4400.0,
+      "env_steps_mean": 17314.333333333332
+    },
+    "train_seconds": {
+      "mean": 14.085885047912598,
+      "std": 1.1921704734567866
+    },
+    "total_budget": 5000
+  },
+  "dqn": {
+    "label": "DQN",
+    "kind": "online",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 933.3333333333334,
+      "env_steps_mean": 2674.0
+    },
+    "train_seconds": {
+      "mean": 52.924410581588745,
+      "std": 5.659705028328166
+    },
+    "total_budget": 4000
+  },
+  "ppo": {
+    "label": "PPO",
+    "kind": "online",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 0.9977777777777778,
+      "std": 0.003142696805273565
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 4600.0,
+      "env_steps_mean": 19573.666666666668
+    },
+    "train_seconds": {
+      "mean": 83.58122634887695,
+      "std": 5.14089864769376
+    },
+    "total_budget": 12000
+  },
+  "cql": {
+    "label": "CQL (offline)",
+    "kind": "offline",
+    "unit": "gradient steps",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 1000.0,
+      "env_steps_mean": 0.0
+    },
+    "train_seconds": {
+      "mean": 45.446555852890015,
+      "std": 1.30219134376913
+    },
+    "total_budget": 20000
+  },
+  "dqn_sparse": {
+    "label": "DQN, outcome-only reward",
+    "kind": "ablation",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 866.6666666666666,
+      "env_steps_mean": 2431.6666666666665
+    },
+    "train_seconds": {
+      "mean": 48.40290911992391,
+      "std": 4.959522773374077
+    },
+    "total_budget": 4000
+  },
+  "ppo_sparse": {
+    "label": "PPO, outcome-only reward",
+    "kind": "ablation",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 6866.666666666667,
+      "env_steps_mean": 24100.0
+    },
+    "train_seconds": {
+      "mean": 74.42918610572815,
+      "std": 13.094173950369933
+    },
+    "total_budget": 12000
+  },
+  "dqn_robust": {
+    "label": "DQN, trained with tool-failure scenarios",
+    "kind": "improvement",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 0.9933333333333333,
+      "std": 0.0054433105395181635
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 800.0,
+      "env_steps_mean": 2236.6666666666665
+    },
+    "train_seconds": {
+      "mean": 60.52986375490824,
+      "std": 8.546841484728365
+    },
+    "total_budget": 4000
+  },
+  "ppo_robust": {
+    "label": "PPO, trained with tool-failure scenarios",
+    "kind": "improvement",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 0.9977777777777778,
+      "std": 0.003142696805273565
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 4600.0,
+      "env_steps_mean": 19778.333333333332
+    },
+    "train_seconds": {
+      "mean": 92.5289359887441,
+      "std": 12.193514016377172
+    },
+    "total_budget": 12000
+  },
+  "dqn_nomask": {
+    "label": "DQN, no guardrail",
+    "kind": "ablation",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 0.26,
+      "std": 0.06820448556987914
+    },
+    "final_val_success": {
+      "mean": 0.24888888888888894,
+      "std": 0.08171011693711216
+    },
+    "to_90pct": {
+      "reached_in": "0/3 seeds",
+      "mean": null,
+      "env_steps_mean": null
+    },
+    "train_seconds": {
+      "mean": 74.75967415173848,
+      "std": 29.68530042399819
+    },
+    "total_budget": 4000
+  },
+  "ppo_nomask": {
+    "label": "PPO, no guardrail",
+    "kind": "ablation",
+    "unit": "episodes",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 0.07111111111111111,
+      "std": 0.013698697784375503
+    },
+    "final_val_success": {
+      "mean": 0.017777777777777778,
+      "std": 0.025141574442188362
+    },
+    "to_90pct": {
+      "reached_in": "0/3 seeds",
+      "mean": null,
+      "env_steps_mean": null
+    },
+    "train_seconds": {
+      "mean": 34.67111245791117,
+      "std": 3.5638528711926125
+    },
+    "total_budget": 12000
+  },
+  "cql_alpha0": {
+    "label": "CQL without conservative penalty",
+    "kind": "ablation",
+    "unit": "gradient steps",
+    "seeds": 3,
+    "best_val_success": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "final_val_success": {
+      "mean": 0.9844444444444446,
+      "std": 0.0031426968052735644
+    },
+    "to_90pct": {
+      "reached_in": "3/3 seeds",
+      "mean": 1000.0,
+      "env_steps_mean": 0.0
+    },
+    "train_seconds": {
+      "mean": 48.879262844721474,
+      "std": 5.492556520373327
+    },
+    "total_budget": 20000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "agent": "ppo",
+  "tag": "nomask",
+  "seed": 2,
+  "episodes": 12000,
+  "train_seconds": 32.93313717842102,
+  "final_val_success": 0.0,
+  "best_val_success": 0.08666666666666667,
+  "episodes_to_90pct_val": null,
+  "env_steps": 23548
+}

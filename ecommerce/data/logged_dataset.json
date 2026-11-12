@@ -1,0 +1,8 @@
+{
+  "episodes": 4000,
+  "transitions": 15698,
+  "behaviour_success_rate": 0.6,
+  "rule_share": 0.7,
+  "noise": 0.1,
+  "seed": 0
+}

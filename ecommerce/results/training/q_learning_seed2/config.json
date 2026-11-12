@@ -1,0 +1,21 @@
+{
+  "agent": "q_learning",
+  "tag": "",
+  "seed": 2,
+  "episodes": 5000,
+  "obs_dim": 85,
+  "n_actions": 16,
+  "hyperparameters": {},
+  "reward": {
+    "lam_cost": 0.1,
+    "mu_latency": 0.05,
+    "goal_handled_bonus": 1.0,
+    "success_bonus": 5.0,
+    "failure_penalty": 2.0,
+    "violation_penalty": 5.0,
+    "blocked_action_penalty": 0.5,
+    "unneeded_clarification_penalty": 0.3
+  },
+  "online": true,
+  "masked": true
+}

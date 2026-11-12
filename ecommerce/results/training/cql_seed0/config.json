@@ -1,0 +1,37 @@
+{
+  "agent": "cql",
+  "tag": "",
+  "seed": 0,
+  "episodes": 20000,
+  "obs_dim": 85,
+  "n_actions": 16,
+  "hyperparameters": {
+    "hidden": 128,
+    "lr": 0.0005,
+    "gamma": 0.97,
+    "alpha": 1.0,
+    "batch_size": 128,
+    "target_update": 200,
+    "seed": 0
+  },
+  "reward": {
+    "lam_cost": 0.1,
+    "mu_latency": 0.05,
+    "goal_handled_bonus": 1.0,
+    "success_bonus": 5.0,
+    "failure_penalty": 2.0,
+    "violation_penalty": 5.0,
+    "blocked_action_penalty": 0.5,
+    "unneeded_clarification_penalty": 0.3
+  },
+  "offline": true,
+  "steps_unit": "gradient steps",
+  "logged_dataset": {
+    "episodes": 4000,
+    "transitions": 15698,
+    "behaviour_success_rate": 0.6,
+    "rule_share": 0.7,
+    "noise": 0.1,
+    "seed": 0
+  }
+}

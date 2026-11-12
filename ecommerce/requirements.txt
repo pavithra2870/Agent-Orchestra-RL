@@ -1,0 +1,9 @@
+# New dependencies for the e-commerce case study (the root requirements.txt is untouched).
+# Already needed by the main project: numpy, pandas, torch, gymnasium, pyyaml, matplotlib, pytest
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.8
+httpx>=0.27
+sentence-transformers>=3.0
+scikit-learn>=1.4
+seaborn>=0.13        # only for docs/diag/make_diagrams.py

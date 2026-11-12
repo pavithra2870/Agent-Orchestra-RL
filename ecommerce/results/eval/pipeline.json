@@ -1,0 +1,370 @@
+{
+  "messages": 200,
+  "phrase_set": "B (held-out wording)",
+  "parser": "router (rules mode)",
+  "goal_set_exact_match": 0.93,
+  "low_confidence_when_wrong": 0.0,
+  "agents": {
+    "rule_based": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "avg_reward": {
+          "mean": 5.686067921532079,
+          "std": 0.0
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.95,
+          "std": 0.0
+        },
+        "pass_k": {
+          "mean": 0.95,
+          "std": 0.0
+        },
+        "avg_reward": {
+          "mean": 5.3332608719274495,
+          "std": 0.0
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.75,
+          "std": 0.0
+        },
+        "avg_steps": {
+          "mean": 5.245,
+          "std": 0.0
+        }
+      },
+      "cost_of_language_errors": 0.050000000000000044,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.06,
+        "premature_finish": 0.04,
+        "should_have_asked": 0.02,
+        "tool_failure_unrecovered": 0.0075,
+        "step_limit": 0.005
+      }
+    },
+    "q_learning": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 0.6325,
+          "std": 0.013385315336840833
+        },
+        "avg_reward": {
+          "mean": 2.4197680434986846,
+          "std": 0.10484207153625821
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.5966666666666667,
+          "std": 0.017118865486811782
+        },
+        "pass_k": {
+          "mean": 0.5499999999999999,
+          "std": 0.021602468994692852
+        },
+        "avg_reward": {
+          "mean": 2.1419076389311997,
+          "std": 0.148922494145082
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.6155303030303031,
+          "std": 0.026784347772217738
+        },
+        "avg_steps": {
+          "mean": 4.3308333333333335,
+          "std": 0.010069204977995384
+        }
+      },
+      "cost_of_language_errors": 0.03583333333333331,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.6699999999999999,
+        "premature_finish": 0.21333333333333335,
+        "unnecessary_escalation": 0.17083333333333334,
+        "should_have_asked": 0.10999999999999999,
+        "tool_failure_unrecovered": 0.051666666666666666,
+        "missed_escalation": 0.020833333333333336
+      }
+    },
+    "sarsa": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 0.6275000000000001,
+          "std": 0.01947220240924654
+        },
+        "avg_reward": {
+          "mean": 2.3794196276057553,
+          "std": 0.18147468105620834
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.635,
+          "std": 0.013385315336840826
+        },
+        "pass_k": {
+          "mean": 0.5816666666666667,
+          "std": 0.012472191289246483
+        },
+        "avg_reward": {
+          "mean": 2.4719188975358155,
+          "std": 0.11499845230725726
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.6212121212121211,
+          "std": 0.0026784347772217947
+        },
+        "avg_steps": {
+          "mean": 4.2925,
+          "std": 0.04097763617714736
+        }
+      },
+      "cost_of_language_errors": -0.0074999999999999884,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.6316666666666666,
+        "premature_finish": 0.18416666666666667,
+        "unnecessary_escalation": 0.16833333333333333,
+        "should_have_asked": 0.1075,
+        "tool_failure_unrecovered": 0.04833333333333333,
+        "missed_escalation": 0.02666666666666667
+      }
+    },
+    "dqn": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 0.9975,
+          "std": 0.002041241452319317
+        },
+        "avg_reward": {
+          "mean": 5.603727031537471,
+          "std": 0.005641392834633194
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.9491666666666667,
+          "std": 0.0031180478223116403
+        },
+        "pass_k": {
+          "mean": 0.9483333333333333,
+          "std": 0.0023570226039551605
+        },
+        "avg_reward": {
+          "mean": 5.25013496280275,
+          "std": 0.03716338743762916
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.7518939393939394,
+          "std": 0.0026784347772217947
+        },
+        "avg_steps": {
+          "mean": 5.7175,
+          "std": 0.08604746752035597
+        }
+      },
+      "cost_of_language_errors": 0.048333333333333374,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.05583333333333333,
+        "premature_finish": 0.04,
+        "should_have_asked": 0.018333333333333333,
+        "tool_failure_unrecovered": 0.009166666666666667,
+        "step_limit": 0.005,
+        "missed_escalation": 0.0016666666666666668
+      }
+    },
+    "ppo": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 0.87,
+          "std": 0.014142135623730965
+        },
+        "avg_reward": {
+          "mean": 4.412715362702264,
+          "std": 0.10862351332218537
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.7866666666666667,
+          "std": 0.010274023338281637
+        },
+        "pass_k": {
+          "mean": 0.7866666666666667,
+          "std": 0.010274023338281637
+        },
+        "avg_reward": {
+          "mean": 3.7447958469829064,
+          "std": 0.06288344076094314
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.75,
+          "std": 0.0
+        },
+        "avg_steps": {
+          "mean": 6.645,
+          "std": 0.3241720222351091
+        }
+      },
+      "cost_of_language_errors": 0.0833333333333333,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.15666666666666668,
+        "premature_finish": 0.15666666666666668,
+        "unnecessary_escalation": 0.051666666666666666,
+        "tool_failure_unrecovered": 0.0275,
+        "should_have_asked": 0.026666666666666665,
+        "missed_escalation": 0.016666666666666666
+      }
+    },
+    "cql": {
+      "oracle_parser": {
+        "success_rate": {
+          "mean": 0.9899999999999999,
+          "std": 0.007071067811865482
+        },
+        "avg_reward": {
+          "mean": 5.608170603876457,
+          "std": 0.05520312545753844
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "router_parser": {
+        "success_rate": {
+          "mean": 0.9416666666666668,
+          "std": 0.006236095644623202
+        },
+        "pass_k": {
+          "mean": 0.9416666666666668,
+          "std": 0.006236095644623202
+        },
+        "avg_reward": {
+          "mean": 5.2678406046944835,
+          "std": 0.04961565700498397
+        },
+        "violation_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "clarify_recall": {
+          "mean": 0.75,
+          "std": 0.0
+        },
+        "avg_steps": {
+          "mean": 5.25,
+          "std": 0.013385315336840778
+        }
+      },
+      "cost_of_language_errors": 0.04833333333333334,
+      "failure_reasons_with_parser": {
+        "missed_goal": 0.065,
+        "premature_finish": 0.04,
+        "should_have_asked": 0.02,
+        "tool_failure_unrecovered": 0.008333333333333333,
+        "step_limit": 0.005
+      }
+    }
+  },
+  "reply_template_flagged": {
+    "replies": 120,
+    "flagged_by_checker": 0
+  },
+  "reply_llm": {
+    "replies": 25,
+    "llm_drafts_flagged": 8,
+    "fell_back_to_template": 8,
+    "shipped_flagged": 0,
+    "seconds_per_reply": 5.064313220977783,
+    "examples": [
+      {
+        "message": "what is your ploicy on sending ietms back? plus has ORD-5762 been dispatched?",
+        "shipped": "Hi Imran, Order ORD-5762 is currently delivered. It was delivered on 2026-10-05. Latest update: Delivered on 2026-10-05. You can return an item within 7 days of delivery, at no charge, if it is unused and in its original packaging; I will ask you to confirm that. Our team collects the item and inspects it. If it passes, you get your refund (or a replacement, if you prefer an exchange). If it fails the inspection it is not refunded and is sent back to you. Returns on orders above 5000 rupees need approval from a human colleague. Is there anything else I can help with?",
+        "mode": "template",
+        "problems": [],
+        "llm_draft": null
+      },
+      {
+        "message": "how do i change from cash to card payment? plus give me the shipping status for order ORD-8466",
+        "shipped": "Hi Isha, Order ORD-8466 is currently shipped. The expected delivery date is 2026-10-17. Latest update: Shipped from warehouse on 2026-10-14. You can change the payment method (for example from cash on delivery to UPI or card) only on orders that are not paid yet, are still open, and are not already out for delivery. Tell me the order and the new method and I will check it. Is there anything else I can help with?",
+        "mode": "template",
+        "problems": [],
+        "llm_draft": null
+      },
+      {
+        "message": "excuse me, what compensation do i get for a delayed order?. Additionally, i wish to cancel order ORD-1553",
+        "shipped": "Hi Meera, If your order is delayed, I can check the latest tracking update. If it is already paid and delayed by 5 days or more, you can ask for a refund. Tell me the order and I will look it up. Order ORD-1553 has been cancelled. Is there anything else I can help with?",
+        "mode": "template",
+        "problems": [],
+        "llm_draft": null
+      },
+      {
+        "message": "good evening, is it possible to return something i bought?",
+        "shipped": "Hi Isha, You can return an item within 7 days of delivery, at no charge, if it is unused and in its original packaging; I will ask you to confirm that. Our team collects the item and inspects it. If it passes, you get your refund (or a replacement, if you prefer an exchange). If it fails the inspection it is not refunded and is sent back to you. Returns on orders above 5000 rupees need approval from a human colleague. Is there anything else I can help with?",
+        "mode": "template",
+        "problems": [],
+        "llm_draft": null
+      },
+      {
+        "message": "switch the way order ORD-2747 is paid from cod to card plus i want odrer ORD-2747 refunedd",
+        "shipped": "Hi Manish, The payment method for ORD-2294 is now CARD. I can't refund ORD-2294 because no payment has been made yet. Is there anything else I can help with?",
+        "mode": "template(fallback)",
+        "problems": [
+          "does not say the refund was declined"
+        ],
+        "llm_draft": "Dear Manish, your payment method for order ORD-2294 has been changed to CARD. Unfortunately, the refund request was declined because the order was not paid. Your order includes a T-shirt and running shoes. If you need further assistance, please let us know."
+      },
+      {
+        "message": "tell me a joke about cats",
+        "shipped": "Dear Rahul, I'm sorry to hear you're experiencing issues. I have escalated your concern to our terminal team for further assistance. They will be in touch with you shortly.",
+        "mode": "llm",
+        "problems": [],
+        "llm_draft": "Dear Rahul, I'm sorry to hear you're experiencing issues. I have escalated your concern to our terminal team for further assistance. They will be in touch with you shortly."
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "agent": "dqn",
+  "tag": "robust",
+  "seed": 2,
+  "episodes": 4000,
+  "train_seconds": 60.143046379089355,
+  "final_val_success": 0.9866666666666667,
+  "best_val_success": 1.0,
+  "episodes_to_90pct_val": 800,
+  "env_steps": 21805
+}

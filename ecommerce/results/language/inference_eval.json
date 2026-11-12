@@ -1,0 +1,58 @@
+{
+  "delivery_status": {
+    "cases": 1521,
+    "right": 690,
+    "wrong": 0,
+    "asked": 831,
+    "none_qualifies": 0,
+    "right_rate": 0.454,
+    "wrong_rate": 0.0,
+    "asked_rate": 0.546,
+    "avg_list_shown": 2.25,
+    "avg_orders_owned_when_asked": 2.64,
+    "no_qualifying_order_cases": 73,
+    "inferred_without_intended": 0
+  },
+  "refund": {
+    "cases": 619,
+    "right": 535,
+    "wrong": 0,
+    "asked": 84,
+    "none_qualifies": 0,
+    "right_rate": 0.864,
+    "wrong_rate": 0.0,
+    "asked_rate": 0.136,
+    "avg_list_shown": 2.0,
+    "avg_orders_owned_when_asked": 2.74,
+    "no_qualifying_order_cases": 975,
+    "inferred_without_intended": 0
+  },
+  "cancel_order": {
+    "cases": 753,
+    "right": 597,
+    "wrong": 0,
+    "asked": 156,
+    "none_qualifies": 0,
+    "right_rate": 0.793,
+    "wrong_rate": 0.0,
+    "asked_rate": 0.207,
+    "avg_list_shown": 2.08,
+    "avg_orders_owned_when_asked": 2.65,
+    "no_qualifying_order_cases": 841,
+    "inferred_without_intended": 0
+  },
+  "payment_change": {
+    "cases": 798,
+    "right": 656,
+    "wrong": 0,
+    "asked": 142,
+    "none_qualifies": 0,
+    "right_rate": 0.822,
+    "wrong_rate": 0.0,
+    "asked_rate": 0.178,
+    "avg_list_shown": 2.09,
+    "avg_orders_owned_when_asked": 2.75,
+    "no_qualifying_order_cases": 796,
+    "inferred_without_intended": 0
+  }
+}

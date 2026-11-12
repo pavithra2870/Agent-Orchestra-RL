@@ -1,0 +1,50 @@
+[
+  {
+    "file": "01-delivery-agent-picks-the-obvious-order",
+    "last_reply": "Hi Divya, I took you to mean ORD-9916 (Backpack, Bluetooth speaker), your only order that is still on its way. If that is not the one, tell me and I will use another. Order ORD-9916 is currently processing. The expected delivery date is 2026-10-22. Latest upda"
+  },
+  {
+    "file": "02-brief-example-delay-check-and-payment-change",
+    "last_reply": "Hi Manish, Order ORD-6759 is currently delayed. The expected delivery date is 2026-10-08 (delayed by 9 days). Latest update: Delayed at regional hub on 2026-10-16. The payment method for ORD-6759 is now UPI. Is there anything else I can help with?"
+  },
+  {
+    "file": "03-vague-payment-request-agent-asks-instead-of-guessing",
+    "last_reply": "Hi Manish, The payment method for ORD-6759 is now CARD. Is there anything else I can help with?"
+  },
+  {
+    "file": "04-cancel-with-confirmation-and-automatic-refund",
+    "last_reply": "Hi Nikhil, Order ORD-3501 has been cancelled. Is there anything else I can help with?"
+  },
+  {
+    "file": "05-wrong-order-id-agent-lists-the-customers-own-orders",
+    "last_reply": "Hi Pooja, I couldn't find order ORD-6759 on your account. These are the orders I can see, which one do you mean? | - ORD-4175: Wireless mouse (ordered 2026-10-14) | - ORD-4749: Phone case, Backpack, Yoga mat (ordered 2026-10-07) | - ORD-3679: Notebook set (ord"
+  },
+  {
+    "file": "06-small-damaged-item-instant-refund",
+    "last_reply": "Hi Ishaan, I'm sorry about that. I've started a refund (RF-9001) of 180 rupees for ORD-9001; our team will review it afterwards. Is there anything else I can help with?"
+  },
+  {
+    "file": "07-big-damaged-order-goes-to-staff",
+    "last_reply": "Hi Tanvi, Because the order value is above what I can handle without a review, I can't approve this return or exchange myself; our support staff will contact you to verify it and sort it out. I've passed the rest to a human colleague who will follow up with yo"
+  },
+  {
+    "file": "08-change-of-mind-return-then-inspection-passed",
+    "last_reply": "Hi Rishi, I've opened a return (RT-9003) for ORD-9003. Our supply-chain team will collect the item and inspect it; once it passes, your refund will be released. If it fails the inspection it cannot be refunded or replaced, and it will be sent back to you. Is t"
+  },
+  {
+    "file": "09-repeat-damage-claims-go-to-staff",
+    "last_reply": "Hi Zoya, Because there have been several recent damage claims on your account, I can't approve this return or exchange myself; our support staff will contact you to verify it and sort it out. I've passed the rest to a human colleague who will follow up with yo"
+  },
+  {
+    "file": "10-item-already-returned-agent-offers-the-refund",
+    "last_reply": "Hi Arjun, I've started a refund (RF-9702) of 941 rupees for ORD-9702. Is there anything else I can help with?"
+  },
+  {
+    "file": "11-policy-question-needs-no-order",
+    "last_reply": "Hi Divya, If an order is lost, you are eligible for a refund of what you paid. Refunds above 5000 rupees need approval from a human colleague. Orders paid by cash on delivery that never arrived have nothing to refund, because nothing was paid. If you tell me w"
+  },
+  {
+    "file": "12-out-of-scope-handed-to-a-human",
+    "last_reply": "Hi Divya, I can't help with that request here, so I'm passing you to a human colleague who can."
+  }
+]

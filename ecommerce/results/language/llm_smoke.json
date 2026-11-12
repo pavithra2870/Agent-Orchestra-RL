@@ -1,0 +1,57 @@
+{
+  "available": true,
+  "model": "phi4-mini:latest",
+  "messages": 12,
+  "phrase_set": "B (held-out wording)",
+  "router_only": {
+    "n": 12,
+    "exact_match": 0.6666666666666666,
+    "invented_goal_rate": 0.25,
+    "missed_goal_rate": 0.25,
+    "low_conf_catches_errors": 0.25,
+    "low_conf_false_alarms": 0.0
+  },
+  "llm_only_raw": {
+    "n": 12,
+    "exact_match": 1.0,
+    "invented_goal_rate": 0.0,
+    "missed_goal_rate": 0.0
+  },
+  "llm_plus_router": {
+    "n": 12,
+    "exact_match": 0.9166666666666666,
+    "invented_goal_rate": 0.0,
+    "missed_goal_rate": 0.08333333333333333,
+    "low_conf_catches_errors": 1.0,
+    "low_conf_false_alarms": 0.2727272727272727
+  },
+  "fallbacks_to_router": 0,
+  "goals_dropped_by_guard": 1,
+  "avg_llm_seconds": 4.9613127907117205,
+  "wall_seconds": 59.54676079750061,
+  "examples": [
+    {
+      "text": "status check on ORD-3440 please and on top of that, i don't wish to proceed with ORD-3440",
+      "truth": [
+        "delivery_status",
+        "cancel_order"
+      ],
+      "router": [
+        "delivery_status",
+        "payment_change"
+      ],
+      "llm_raw": [
+        "delivery_status",
+        "cancel_order"
+      ],
+      "final": [
+        "delivery_status"
+      ],
+      "conf": 0.45,
+      "notes": [
+        "dropped goals with no router support: ['cancel_order']",
+        "LLM ['delivery_status', 'cancel_order'] and router ['delivery_status', 'payment_change'] disagree, so confidence is capped"
+      ]
+    }
+  ]
+}
