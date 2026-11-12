@@ -3,8 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Orchestra RL</title>
-<meta name="description" content="A reinforcement-learning agent that learns which tool to call, step by step, for a simulated online shop's customer support.">
+<title>Agent Orchestra RL · An RL agent that learns which tool to call</title>
+<meta name="description" content="A reinforcement-learning agent that learns which tool to call, step by step, for customer support. DQN, PPO, offline CQL and Q-learning compared on 1,410 held-out scenarios, with hard safety guardrails and zero rule violations.">
+<meta name="keywords" content="reinforcement learning, tool use, AI agents, agent orchestration, DQN, PPO, CQL, offline RL, action masking, customer support agent, LLM agents, safe AI">
+<meta name="author" content="Pavithra K R">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f7f5f0">
+<link rel="canonical" href="https://pavithra2870.github.io/Agent-Orchestra-RL/">
+
+<!-- icons -->
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- social sharing -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Agent Orchestra RL">
+<meta property="og:title" content="An agent that learns which tool to call">
+<meta property="og:description" content="Reinforcement learning for safe, tool-using AI agents: a customer-support agent that picks every next step, with guardrails and an independent evaluator.">
+<meta property="og:url" content="https://pavithra2870.github.io/Agent-Orchestra-RL/">
+<meta property="og:image" content="https://pavithra2870.github.io/Agent-Orchestra-RL/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Agent Orchestra RL: an agent that learns which tool to call">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="An agent that learns which tool to call">
+<meta name="twitter:description" content="Reinforcement learning for safe, tool-using AI agents.">
+<meta name="twitter:image" content="https://pavithra2870.github.io/Agent-Orchestra-RL/assets/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "An agent that learns which tool to call",
+  "description": "A reinforcement-learning agent that learns which tool to call, step by step, for customer support, with safety guardrails and an independent evaluator.",
+  "image": "https://pavithra2870.github.io/Agent-Orchestra-RL/assets/og-image.png",
+  "author": {"@type": "Person", "name": "Pavithra K R", "url": "https://github.com/pavithra2870"},
+  "datePublished": "2026-11-12",
+  "keywords": "reinforcement learning, tool use, AI agents, DQN, PPO, CQL, action masking",
+  "url": "https://pavithra2870.github.io/Agent-Orchestra-RL/",
+  "isBasedOn": {"@type": "SoftwareSourceCode", "name": "Agent-Orchestra-RL", "codeRepository": "https://github.com/pavithra2870/Agent-Orchestra-RL", "programmingLanguage": ["Python", "JavaScript"]}
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -24,7 +65,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
@@ -285,11 +326,14 @@ footer a:hover{color:var(--ink)}
   <div class="wrap">
     <a href="#top" class="brand" aria-label="Agent Orchestra RL">
       <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <rect width="32" height="32" rx="9" fill="#1b1a17"/>
-        <circle cx="10" cy="11" r="3" fill="#f08a63"/>
-        <circle cx="22" cy="11" r="3" fill="#f1eee7"/>
-        <circle cx="16" cy="22" r="3" fill="#f1eee7"/>
-        <path d="M10 11 16 22M22 11 16 22M10 11h12" stroke="#f1eee7" stroke-width="1.4" stroke-opacity=".55"/>
+        <rect width="32" height="32" rx="8" fill="#1b1a17"/>
+        <path d="M9 16H22.5" stroke="#f1eee7" stroke-opacity=".32" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 16C14.5 16 15.5 23 22.5 23" stroke="#f1eee7" stroke-opacity=".32" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 16C14.5 16 15.5 9 22.5 9" stroke="#f08a63" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="8.5" cy="16" r="2.8" fill="#f1eee7"/>
+        <circle cx="23.5" cy="16" r="2" fill="#f1eee7" fill-opacity=".5"/>
+        <circle cx="23.5" cy="23" r="2" fill="#f1eee7" fill-opacity=".5"/>
+        <circle cx="23.5" cy="9" r="3.2" fill="#f08a63"/>
       </svg>
       Agent Orchestra
     </a>
@@ -327,7 +371,7 @@ footer a:hover{color:var(--ink)}
       <div class="frame">
         <div class="frame-bar"><i></i><i></i><i></i><span>Live conversation</span></div>
         <div class="crop" style="aspect-ratio:1400/1000">
-          <img src="figures/screenshots/pages/01-live-conversation.png" alt="The live conversation page: a customer asks about a delayed order and a payment change, and the agent answers step by step" data-zoom>
+          <img width="1400" height="3095" src="figures/screenshots/pages/01-live-conversation.png" alt="The live conversation page: a customer asks about a delayed order and a payment change, and the agent answers step by step" data-zoom>
         </div>
       </div>
     </div>
@@ -393,7 +437,7 @@ footer a:hover{color:var(--ink)}
     </div>
 
     <div class="figure rv">
-      <img src="figures/diagrams/02_request_flow.png" alt="What happens to one customer message: read, build state, policy picks a tool, tool runs, state updates, loop until finished, reply, evaluator checks" data-zoom>
+      <img width="2104" height="1193" src="figures/diagrams/02_request_flow.png" alt="What happens to one customer message: read, build state, policy picks a tool, tool runs, state updates, loop until finished, reply, evaluator checks" data-zoom>
     </div>
     <p class="caption rv">Six goals, any mix in one message. The agent learns the order of steps on its own.</p>
   </div>
@@ -454,12 +498,12 @@ footer a:hover{color:var(--ink)}
         <button class="tab" role="tab" aria-selected="false" aria-controls="c6" id="t6"><b>Off-topic, handed over</b><span>Out of scope, so the agent hands it to a person instead of making something up.</span></button>
       </div>
       <div>
-        <div class="panel on" role="tabpanel" id="c1" aria-labelledby="t1"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Delay check and payment change</span></div><div class="crop"><img src="figures/screenshots/cases/02-brief-example-delay-check-and-payment-change.png" alt="Agent checks a delayed order and changes the payment method after confirmation" data-zoom loading="lazy"></div></div></div>
-        <div class="panel" role="tabpanel" id="c2" aria-labelledby="t2"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Vague payment request</span></div><div class="crop"><img src="figures/screenshots/cases/03-vague-payment-request-agent-asks-instead-of-guessing.png" alt="Agent asks whether the customer wants UPI or card" data-zoom loading="lazy"></div></div></div>
-        <div class="panel" role="tabpanel" id="c3" aria-labelledby="t3"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Small damaged item</span></div><div class="crop"><img src="figures/screenshots/cases/06-small-damaged-item-instant-refund.png" alt="Agent starts an instant refund for a small damaged item" data-zoom loading="lazy"></div></div></div>
-        <div class="panel" role="tabpanel" id="c4" aria-labelledby="t4"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Big damaged order</span></div><div class="crop"><img src="figures/screenshots/cases/07-big-damaged-order-goes-to-staff.png" alt="Agent hands a high-value damage claim to staff" data-zoom loading="lazy"></div></div></div>
-        <div class="panel" role="tabpanel" id="c5" aria-labelledby="t5"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Change of mind</span></div><div class="crop"><img src="figures/screenshots/cases/08-change-of-mind-return-then-inspection-passed.png" alt="Agent opens a return; refund released after inspection passes" data-zoom loading="lazy"></div></div></div>
-        <div class="panel" role="tabpanel" id="c6" aria-labelledby="t6"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Out of scope</span></div><div class="crop"><img src="figures/screenshots/cases/12-out-of-scope-handed-to-a-human.png" alt="Agent hands an off-topic message to a human" data-zoom loading="lazy"></div></div></div>
+        <div class="panel on" role="tabpanel" id="c1" aria-labelledby="t1"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Delay check and payment change</span></div><div class="crop"><img width="1400" height="2884" src="figures/screenshots/cases/02-brief-example-delay-check-and-payment-change.png" alt="Agent checks a delayed order and changes the payment method after confirmation" data-zoom loading="lazy"></div></div></div>
+        <div class="panel" role="tabpanel" id="c2" aria-labelledby="t2"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Vague payment request</span></div><div class="crop"><img width="1400" height="2684" src="figures/screenshots/cases/03-vague-payment-request-agent-asks-instead-of-guessing.png" alt="Agent asks whether the customer wants UPI or card" data-zoom loading="lazy"></div></div></div>
+        <div class="panel" role="tabpanel" id="c3" aria-labelledby="t3"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Small damaged item</span></div><div class="crop"><img width="1400" height="2882" src="figures/screenshots/cases/06-small-damaged-item-instant-refund.png" alt="Agent starts an instant refund for a small damaged item" data-zoom loading="lazy"></div></div></div>
+        <div class="panel" role="tabpanel" id="c4" aria-labelledby="t4"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Big damaged order</span></div><div class="crop"><img width="1400" height="1322" src="figures/screenshots/cases/07-big-damaged-order-goes-to-staff.png" alt="Agent hands a high-value damage claim to staff" data-zoom loading="lazy"></div></div></div>
+        <div class="panel" role="tabpanel" id="c5" aria-labelledby="t5"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Change of mind</span></div><div class="crop"><img width="1400" height="3059" src="figures/screenshots/cases/08-change-of-mind-return-then-inspection-passed.png" alt="Agent opens a return; refund released after inspection passes" data-zoom loading="lazy"></div></div></div>
+        <div class="panel" role="tabpanel" id="c6" aria-labelledby="t6"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>Out of scope</span></div><div class="crop"><img width="1400" height="1050" src="figures/screenshots/cases/12-out-of-scope-handed-to-a-human.png" alt="Agent hands an off-topic message to a human" data-zoom loading="lazy"></div></div></div>
       </div>
     </div>
   </div>
@@ -487,7 +531,7 @@ footer a:hover{color:var(--ink)}
     </div>
     </div>
     <div class="figure rv" style="margin-top:48px">
-      <img src="figures/diagrams/03_evaluation_framework.png" alt="Evaluation framework: test sets, independent evaluator and metrics" data-zoom>
+      <img width="2292" height="1530" src="figures/diagrams/03_evaluation_framework.png" alt="Evaluation framework: test sets, independent evaluator and metrics" data-zoom>
     </div>
   </div>
 </section>
@@ -529,12 +573,12 @@ footer a:hover{color:var(--ink)}
       <div class="card rv">
         <h3>Success by test set</h3>
         <p class="hint">Where each agent holds up and where it breaks</p>
-        <img src="figures/charts/chart_success_by_test_set.png" alt="Success rate per test set for each agent" data-zoom loading="lazy">
+        <img width="1480" height="880" src="figures/charts/chart_success_by_test_set.png" alt="Success rate per test set for each agent" data-zoom loading="lazy">
       </div>
       <div class="card rv">
         <h3>Learning curves</h3>
         <p class="hint">DQN reached 90% in about 930 episodes, roughly 4x faster than Q-learning</p>
-        <img src="figures/charts/chart_learning_curves.png" alt="Validation success over training episodes for DQN, PPO, Q-learning and SARSA" data-zoom loading="lazy">
+        <img width="1440" height="720" src="figures/charts/chart_learning_curves.png" alt="Validation success over training episodes for DQN, PPO, Q-learning and SARSA" data-zoom loading="lazy">
       </div>
     </div>
   </div>
@@ -551,17 +595,17 @@ footer a:hover{color:var(--ink)}
     <div class="gallery">
       <div class="frame rv">
         <div class="frame-bar"><i></i><i></i><i></i><span>Compare agents</span></div>
-        <div class="crop"><img src="figures/screenshots/pages/02-compare-agents.png" alt="Compare agents page with success rates per test set" data-zoom loading="lazy"></div>
+        <div class="crop"><img width="1538" height="2976" src="figures/screenshots/pages/02-compare-agents.png" alt="Compare agents page with success rates per test set" data-zoom loading="lazy"></div>
         <div class="cap"><b>Compare agents.</b> Every method side by side, per test set.</div>
       </div>
       <div class="frame rv">
         <div class="frame-bar"><i></i><i></i><i></i><span>Failure replay</span></div>
-        <div class="crop"><img src="figures/screenshots/pages/04b-failure-replay.png" alt="Replay of a failed run step by step" data-zoom loading="lazy"></div>
+        <div class="crop"><img width="1400" height="4786" src="figures/screenshots/pages/04b-failure-replay.png" alt="Replay of a failed run step by step" data-zoom loading="lazy"></div>
         <div class="cap"><b>Failure replay.</b> See exactly where a run went wrong.</div>
       </div>
       <div class="frame rv">
         <div class="frame-bar"><i></i><i></i><i></i><span>Language and guardrails</span></div>
-        <div class="crop"><img src="figures/screenshots/pages/05-language-and-guardrails.png" alt="Language layer accuracy and guardrail checks" data-zoom loading="lazy"></div>
+        <div class="crop"><img width="1400" height="2393" src="figures/screenshots/pages/05-language-and-guardrails.png" alt="Language layer accuracy and guardrail checks" data-zoom loading="lazy"></div>
         <div class="cap"><b>Language and guardrails.</b> How well messages are read and checked.</div>
       </div>
     </div>
