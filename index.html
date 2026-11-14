@@ -277,6 +277,30 @@ footer a:hover{color:var(--ink)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.bar .fill{transition:none}.panel.on{animation:none}}
 
+
+/* more results page */
+#more-results{padding:56px 0 0;scroll-margin-top:64px}
+.mr-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-bottom:28px}
+.mr-back:hover{color:var(--ink)}
+.mr-back svg{width:16px;height:16px}
+.mr-block{margin-top:56px}
+.mr-block h3{font-size:24px;letter-spacing:-.02em;font-weight:600}
+.mr-block>p{color:var(--muted);font-size:16px;margin-top:6px;max-width:680px}
+.tbl{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto}
+.tbl table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.tbl th{text-align:right;font-weight:500;color:var(--faint);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:14px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl td{text-align:right;padding:12px 16px;border-bottom:1px solid var(--line-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left;color:var(--ink);font-weight:500;position:sticky;left:0;background:var(--surface)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td.bad{color:var(--accent-ink);font-weight:600;background:var(--accent-soft)}
+.tbl td.good{color:var(--teal);font-weight:600}
+.tbl td small{display:block;font-size:12px;color:var(--faint);font-weight:400}
+.mr-note{margin-top:14px;font-size:14px;color:var(--muted);max-width:720px}
+.mr-note b{color:var(--ink);font-weight:600}
+.mr-fig{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.mr-fig img{margin:0 auto;cursor:zoom-in;max-width:min(760px,100%)}
+.more-cta{display:flex;justify-content:center;margin-top:44px}
+
 /* responsive */
 @media (max-width:980px){
   .nav-links{display:none}
@@ -341,6 +365,7 @@ footer a:hover{color:var(--ink)}
       <a href="#how">How it works</a>
       <a href="#demo">In action</a>
       <a href="#results">Results</a>
+      <a href="#more-results">More results</a>
       <a href="#lessons">Lessons</a>
     </nav>
     <a class="btn btn-dark btn-sm" href="https://github.com/pavithra2870/Agent-Orchestra-RL" target="_blank" rel="noopener">
@@ -581,6 +606,11 @@ footer a:hover{color:var(--ink)}
         <img width="1440" height="720" src="figures/charts/chart_learning_curves.png" alt="Validation success over training episodes for DQN, PPO, Q-learning and SARSA" data-zoom loading="lazy">
       </div>
     </div>
+
+    <div class="more-cta rv">
+      <a class="btn btn-light" href="#more-results">See the full numbers
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -721,6 +751,116 @@ footer a:hover{color:var(--ink)}
 
 </main>
 
+<!-- ============ MORE RESULTS (shown at #more-results) ============ -->
+<main id="more-results" hidden>
+  <div class="wrap">
+    <a class="mr-back" href="#results"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg>Back to the story</a>
+    <p class="eyebrow">More results</p>
+    <h2>The full <span class="serif">numbers.</span></h2>
+    <p class="sub">Same tests as the main page, with the detail left out there. Simulated shop, 1,410 scenarios, 4 runs each, 3 training seeds.</p>
+
+    <div class="mr-block">
+      <h3>Full ranking</h3>
+      <p>"Solved every time" is the share of scenarios solved in all four runs. Regret is how far each agent falls short of a planner that knows the hidden truth. Lower is better.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Agent</th><th>Success</th><th>Solved every time</th><th>Rule breaks</th><th>Regret</th><th>Steps</th></tr></thead>
+        <tbody>
+          <tr><td>Rule-based playbook</td><td>99.9%</td><td>99.6%</td><td>0.0%</td><td>0.05</td><td>5.3</td></tr>
+          <tr><td>DQN, failure-aware training</td><td>99.6%</td><td>99.0%</td><td>0.0%</td><td>0.24</td><td>6.3</td></tr>
+          <tr><td>DQN</td><td>98.5%</td><td>98.1%</td><td>0.0%</td><td>0.23</td><td>5.9</td></tr>
+          <tr><td>CQL (offline)</td><td>97.6%</td><td>97.3%</td><td>0.0%</td><td>0.24</td><td>5.3</td></tr>
+          <tr><td>PPO, failure-aware training</td><td>96.6%</td><td>96.1%</td><td>0.0%</td><td>0.72</td><td>7.7</td></tr>
+          <tr><td>PPO</td><td>94.0%</td><td>93.6%</td><td>0.0%</td><td>0.84</td><td>7.2</td></tr>
+          <tr><td>Q-learning</td><td>68.0%</td><td>55.8%</td><td>0.0%</td><td>2.84</td><td>4.5</td></tr>
+          <tr><td>SARSA</td><td>66.9%</td><td>54.3%</td><td>0.0%</td><td>2.93</td><td>4.5</td></tr>
+          <tr><td>Random (legal actions)</td><td>7.6%</td><td>0.4%</td><td>0.0%</td><td>7.78</td><td>2.1</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="mr-block">
+      <h3>Success on each test set</h3>
+      <p>On familiar scenarios almost everything looks fine. The gaps show up on unseen goal combinations, tool failures and the new return and policy cases.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Agent</th><th>Everyday</th><th>Unseen combos</th><th>Tool failures</th><th>Missing info</th><th>Off-topic</th><th>Returns</th><th>Policy</th></tr></thead>
+        <tbody>
+          <tr><td>Rule-based</td><td>100%</td><td>100%</td><td>99.1%</td><td>99.8%</td><td>100%</td><td>100%</td><td>100%</td></tr>
+          <tr><td>DQN</td><td>100%</td><td>99.6%</td><td>91.6%</td><td>99.9%</td><td>100%</td><td>98.8%</td><td>100%</td></tr>
+          <tr><td>CQL</td><td>99.1%</td><td>97.2%</td><td>93.9%</td><td>97.2%</td><td>100%</td><td>96.8%</td><td>100%</td></tr>
+          <tr><td>PPO</td><td>99.9%</td><td class="bad">66.6%</td><td>91.4%</td><td>99.8%</td><td>100%</td><td>100%</td><td>99.7%</td></tr>
+          <tr><td>Q-learning</td><td>92.5%</td><td class="bad">6.8%</td><td>79.0%</td><td>87.4%</td><td>100%</td><td>60.1%</td><td>69.0%</td></tr>
+          <tr><td>SARSA</td><td>91.3%</td><td class="bad">7.0%</td><td>77.7%</td><td>86.6%</td><td>100%</td><td>56.8%</td><td>69.6%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="mr-note"><b>Tool failures:</b> every plain learner loses 5 to 9 points, by finishing instead of handing over when a tool stays down. Training with such cases fixes it (see below).</p>
+    </div>
+
+    <div class="mr-block">
+      <h3>Returns and damage claims, by outcome</h3>
+      <p>Twelve outcomes the agent has to get right, from an instant refund to handing a case to staff.</p>
+      <div class="mr-fig">
+        <img width="1440" height="919" src="figures/charts/chart_returns_outcomes.png" alt="Success rate of DQN, PPO and CQL on each of twelve return and damage outcomes" data-zoom loading="lazy">
+      </div>
+      <p class="mr-note"><b>CQL is weakest at knowing when a human must decide:</b> repeat claimer 80%, over the value cap 85%, high-value change of mind 86%, late report 94%. Those cases are rare in its 4,000-conversation log. No agent with the guardrail refunded anything before an inspection passed.</p>
+    </div>
+
+    <div class="mr-block">
+      <h3>What each change is worth</h3>
+      <p>Take a part away, or add one, and see what moves.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Change</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+          <tr><td>Remove the guardrail, DQN</td><td>98.5%</td><td class="bad">21.1%</td></tr>
+          <tr><td>Remove the guardrail, PPO</td><td>94.0%</td><td class="bad">7.8%</td></tr>
+          <tr><td>Remove the guardrail, random agent <small>share of runs breaking a rule</small></td><td>0.0%</td><td class="bad">83.2%</td></tr>
+          <tr><td>Reward only the final outcome, DQN</td><td>98.5%</td><td>98.7%</td></tr>
+          <tr><td>Reward only the final outcome, PPO</td><td>94.0%</td><td>96.3%</td></tr>
+          <tr><td>Train with tool-failure cases, DQN <small>on the tool-failure test set</small></td><td>91.6%</td><td class="good">98.2%</td></tr>
+          <tr><td>Train with tool-failure cases, PPO <small>on the tool-failure test set</small></td><td>91.4%</td><td class="good">98.5%</td></tr>
+          <tr><td>CQL without its conservative penalty</td><td>97.6%</td><td>98.7%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="mr-note"><b>Without the penalty,</b> CQL scores a little higher but gets wasteful: 7.6 steps instead of 5.3, and regret 0.53 instead of 0.24. The penalty buys efficiency, not accuracy. Rewarding only the final outcome changed little, so the extra per-goal reward wasn't needed here.</p>
+    </div>
+
+    <div class="mr-block">
+      <h3>How fast each method learns</h3>
+      <p>Training needed to reach 90% success on a validation set.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Method</th><th>To reach 90%</th><th>Live steps used</th></tr></thead>
+        <tbody>
+          <tr><td>DQN</td><td>933 episodes</td><td>2,674</td></tr>
+          <tr><td>CQL (offline)</td><td>1,000 gradient steps</td><td class="good">0</td></tr>
+          <tr><td>Q-learning</td><td>4,000 episodes</td><td>15,534</td></tr>
+          <tr><td>SARSA</td><td>4,400 episodes</td><td>17,314</td></tr>
+          <tr><td>PPO</td><td>4,600 episodes</td><td>19,574</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="mr-block">
+      <h3>When reading the message goes wrong</h3>
+      <p>Success when handed the true goals, against success with the real language layer reading 200 messages. The goal set was read exactly right in 93.0% of them.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Agent</th><th>True goals</th><th>Real language layer</th></tr></thead>
+        <tbody>
+          <tr><td>Rule-based</td><td>100%</td><td>95.0%</td></tr>
+          <tr><td>DQN</td><td>99.8%</td><td>94.9%</td></tr>
+          <tr><td>CQL</td><td>99.0%</td><td>94.2%</td></tr>
+          <tr><td>PPO</td><td>87.0%</td><td class="bad">78.7%</td></tr>
+          <tr><td>Q-learning</td><td>63.2%</td><td>59.7%</td></tr>
+          <tr><td>SARSA</td><td>62.8%</td><td>63.5%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="mr-note"><b>Reading errors cost the agents up to 8.3 points,</b> so the language layer is the weakest part. The router's own confidence did not flag any of its mistakes. When an optional LLM rewords replies, a fact-checker rejected 8 of 25 drafts and swapped in the verified template, so no unsupported claim reached a customer.</p>
+    </div>
+
+    <div class="more-cta">
+      <a class="btn btn-dark" href="#results">Back to the story</a>
+    </div>
+  </div>
+</main>
+
 <footer>
   <div class="wrap">
     <span>Agent Orchestra RL · Pavithra K R · 2026</span>
@@ -773,6 +913,23 @@ footer a:hover{color:var(--ink)}
   function close(){lb.classList.remove('on');document.body.style.overflow=''}
   lb.addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+
+
+  // simple page switch: #more-results shows the full numbers, anything else shows the story
+  var story=document.getElementById('top'),more=document.getElementById('more-results'),baseTitle=document.title,wasMore=false;
+  function route(){
+    var isMore=location.hash==='#more-results';
+    story.hidden=isMore;more.hidden=!isMore;
+    document.title=isMore?'More results \u00b7 Agent Orchestra RL':baseTitle;
+    if(isMore){window.scrollTo({top:0,behavior:'instant'})}
+    else{
+      var id=decodeURIComponent(location.hash.slice(1)),el=id&&document.getElementById(id);
+      if(el){el.scrollIntoView({behavior:'instant'})}else if(wasMore){window.scrollTo({top:0,behavior:'instant'})}
+    }
+    wasMore=isMore;
+  }
+  window.addEventListener('hashchange',route);
+  route();
 
   // hide demo buttons until a link is set
   ['demo-link','demo-link-2'].forEach(function(id){var a=document.getElementById(id);if(a&&a.getAttribute('href')==='#')a.style.display='none'});
